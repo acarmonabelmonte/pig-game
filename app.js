@@ -23,14 +23,15 @@ document.getElementById('current-1').textContent = '0';
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
     
-    // Random number
+    // 1. Random number
     dice = Math.floor(Math.random() * 6) + 1;
 
-    // Display the result
+    // 2. Display the result
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-' + dice + '.png';
-    // Update the score if the rolled number is not a 1
+
+    // 3. Update the score if the rolled number is not a 1
 
 
 });

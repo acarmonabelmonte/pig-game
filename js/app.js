@@ -22,6 +22,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else {
             //Next player
+            alert("You have rolled a 1 in the dice, you lose your current score! It is the other player's turn.");
             nextPlayer();
         }
     }
@@ -69,10 +70,12 @@ function nextPlayer() {
 
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-
+    document.getElementById('dice-1').style.display = 'none';
+    document.getElementById('dice-2').style.display = 'none';
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
-}
+
+};
 
 document.querySelector('.btn-new').addEventListener('click', init);
 
@@ -97,4 +100,4 @@ function init() {
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
-}
+};
